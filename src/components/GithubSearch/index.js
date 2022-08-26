@@ -9,14 +9,15 @@ import ReposResults from '../RepoResults';
 import './styles.scss';
 
 function GitHubSearch() {
+  const isErrorMessage = false;
   return (
     <Container className="git-hub-search">
       {
-        // on l'instancie
+
       }
       <Header />
       <SearchBar />
-      <Message />
+      <Message message="Bonjour" isError={isErrorMessage} />
       <ReposResults />
     </Container>
   );
