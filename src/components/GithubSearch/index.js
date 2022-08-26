@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Container } from 'semantic-ui-react';
 
 // on importe le composant en charge de la description du header
@@ -12,11 +13,13 @@ import './styles.scss';
 const { items: repos } = reposData;
 
 function GitHubSearch() {
+  const [search, setSearch] = useState('');
+
   const isErrorMessage = false;
   return (
     <Container className="git-hub-search">
       <Header />
-      <SearchBar />
+      <SearchBar search={search} setSearch={setSearch} />
       <Message message="Bonjour" isError={isErrorMessage} />
       <ReposResults repos={repos} />
     </Container>

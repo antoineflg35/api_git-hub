@@ -1,7 +1,7 @@
 import { Card, Image } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 
-function RepoResult({ name, owner, description}) {
+function RepoResult({ name, owner, description }) {
   const { login, avatar_url: avatarUrl } = owner;
   return (
     <Card>
@@ -31,6 +31,5 @@ RepoResult.propTypes = {
 RepoResult.defaultProps = {
   description: '',
 };
-
 
 export default RepoResult;
