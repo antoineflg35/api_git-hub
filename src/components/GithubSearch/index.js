@@ -25,8 +25,8 @@ function GitHubSearch() {
     axios.get(`https://api.github.com/search/repositories?q=${search}`)
       .then((response) => {
         const reposFromApi = response.data.items;
-        const url = response.data.items;
-        console.log(url);
+        const coucou = response.data.items.url;
+        console.log(coucou);
         const countReposFromApi = response.data.total_count;
         SetPosts(reposFromApi);
         const messageToDisplay = countReposFromApi >= 2

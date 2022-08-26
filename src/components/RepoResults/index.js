@@ -5,7 +5,7 @@ import RepoResult from './RepoResult';
 
 function ReposResults({ repos }) {
   return (
-    <Card.Group itemsPerRow={3} stackable>
+    <Card.Group itemsPerRow={3} stackable centered className='group-card'>
       {
         repos.map(
           (repo) => <RepoResult key={repo.id} {...repo} />,
