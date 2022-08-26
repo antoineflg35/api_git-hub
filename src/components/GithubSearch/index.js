@@ -3,9 +3,11 @@ import SearchBar from '../SearchBar';
 import Message from '../Message';
 import ReposResults from '../RepoResults';
 
+import './styles.scss';
+
 function GitHubSearch() {
   return (
-    <div>
+    <div className='git-hub-search'>
       <Header />
       <SearchBar />
       <Message />

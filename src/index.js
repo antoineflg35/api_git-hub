@@ -4,6 +4,7 @@ import { createRoot } from 'react-dom/client';
 // == Import : local
 // Composants
 import GitHubSearch from './components/GithubSearch';
+import 'semantic-ui-css/semantic.min.css';
 
 // == Render
 // 1. Élément React racine (celui qui contient l'ensemble de l'app)

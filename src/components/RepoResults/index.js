@@ -1,5 +1,12 @@
 function ReposResults() {
-  return <div>ReposResults</div>;
+  return (
+    <div>
+      <ReposResults />
+      <ReposResults />
+      <ReposResults />
+      <ReposResults />
+    </div>
+  );
 }
 
 export default ReposResults;
