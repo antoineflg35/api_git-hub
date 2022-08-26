@@ -1,5 +1,7 @@
+@use 'src/styles/vars';
+
 .git-hub-search{
-  max-width: 700px;
-  margin: 0 auto;
-  min-height: 100%;
+  padding: vars.$gutter;
+  background-color: vars.$colorLight;
+  min-height: 100vh;
 }

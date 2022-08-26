@@ -1,10 +1,17 @@
+import { Card } from 'semantic-ui-react';
+import RepoResult from './RepoResult';
+
 function ReposResults() {
   return (
     <div>
-      <ReposResults />
-      <ReposResults />
-      <ReposResults />
-      <ReposResults />
+      <Card.Group itemsPerRow={3} />
+      <RepoResult />
+      <RepoResult />
+      <RepoResult />
+      <RepoResult />
+      <RepoResult />
+      <RepoResult />
+      <Card.Group />
     </div>
   );
 }

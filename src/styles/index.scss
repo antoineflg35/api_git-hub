@@ -2,7 +2,11 @@
 @use 'vars';
 
 body {
-  font-family: sans-serif;
+  font-family: sans-serif;  
+}
+
+html body{
+  background-color: vars.$colorBackground;
 }
 
 /* 
