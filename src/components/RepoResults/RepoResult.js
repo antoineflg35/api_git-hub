@@ -26,6 +26,7 @@ RepoResult.propTypes = {
   owner: PropTypes.shape({
     login: PropTypes.string.isRequired,
     avatar_url: PropTypes.string.isRequired,
+    html_url: PropTypes.any.isRequired,
   }).isRequired,
   description: PropTypes.string,
 };
