@@ -1,20 +1,36 @@
-import { Card, Image, Icon } from 'semantic-ui-react';
+import { Card, Image } from 'semantic-ui-react';
+import PropTypes from 'prop-types';
 
-function RepoResult() {
+function RepoResult({ name, owner, description}) {
+  const { login, avatar_url: avatarUrl } = owner;
   return (
     <Card>
-      <Image src="https://avatars3.githubusercontent.com/u/698437?v=4" wrapped ui={false} />
+      <Image src={avatarUrl} wrapped ui={false} />
       <Card.Content>
-        <Card.Header>javascript</Card.Header>
+        <Card.Header>{name}</Card.Header>
         <Card.Meta>
-          <span className="date">airbnb</span>
+          <span className="date">{login}</span>
         </Card.Meta>
         <Card.Description>
-          JavaScript Style Guide
+          {description}
         </Card.Description>
       </Card.Content>
     </Card>
   );
 }
+
+RepoResult.propTypes = {
+  name: PropTypes.string.isRequired,
+  owner: PropTypes.shape({
+    login: PropTypes.string.isRequired,
+    avatar_url: PropTypes.string.isRequired,
+  }).isRequired,
+  description: PropTypes.string,
+};
+
+RepoResult.defaultProps = {
+  description: '',
+};
+
 
 export default RepoResult;

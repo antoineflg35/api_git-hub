@@ -1,7 +1,7 @@
 import { Message as MessageSUI } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 
-function Message({message, isError}) {
+function Message({ message, isError }) {
   return <MessageSUI negative={isError}>{ message }</MessageSUI>;
 }
 
